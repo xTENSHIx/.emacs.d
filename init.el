@@ -28,7 +28,7 @@
                   (emacs (concat invocation-directory invocation-name))
                   ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
                                         "--eval" "(byte-recompile-directory \".\" 0 'force)")))
-           n       ((require 'elpaca))
+                  ((require 'elpaca))
                   ((elpaca-generate-autoloads "elpaca" repo)))
             (progn (message "%s" (buffer-string)) (kill-buffer buffer))
           (error "%s" (with-current-buffer buffer (buffer-string))))
