@@ -12,6 +12,8 @@
 
 (use-package multiple-cursors
   :ensure t
+  :bind (("C-c m t" . mc/mark-all-like-this-dwim)
+         ("C-c m b" . mc/edit-beginnings-of-lines))
   :config
   (require 'multiple-cursors))
 
