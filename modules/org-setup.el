@@ -5,6 +5,7 @@
 
 (use-package org-noter)
 
-(use-package org-roam)
+(use-package org-roam
+  :after org-mode)
 
 (provide 'org-setup)

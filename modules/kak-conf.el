@@ -1,0 +1,10 @@
+(use-package ryo-modal
+  :commands ryo-modal-mode
+  :bind ("C-c ESC" . ryo-modal-mode)
+  :config
+  (ryo-modal-keys
+   ("i" ryo-modal-mode)
+   ("s" mc/)))
+
+
+(provide 'kak-conf)

@@ -58,6 +58,7 @@
 (require 'pdf-reading-setup)
 (require 'rss-feeds-setup)
 (require 'meow-conf)
+(require 'kak-conf)
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
