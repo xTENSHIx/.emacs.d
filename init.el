@@ -46,11 +46,19 @@
 
 (elpaca-wait)
 
+(setq package-install-upgrade-built-in t)
 (use-package kaolin-themes)
 
-;; (use-package transient)
-;; (use-package magit
-;;   :after transient)
+;; newer version of compat required by elfeed
+;; than built into emacs 30.2-r3
+(use-package compat
+  :ensure (:wait t))
+
+
+(use-package cond-let)
+(use-package transient)
+(use-package magit
+  :after transient)
 
 (require 'regular-editing-setup)
 ;; (require 'structural-editing-setup)
@@ -59,6 +67,7 @@
 (require 'rss-feeds-setup)
 (require 'meow-conf)
 (require 'kak-conf)
+(require 'org-setup)
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)

@@ -1,3 +1,6 @@
+(use-package zig-mode)
+
+
 (use-package eglot
   :ensure nil
   :config

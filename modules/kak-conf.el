@@ -4,7 +4,10 @@
   :config
   (ryo-modal-keys
    ("i" ryo-modal-mode)
-   ("s" mc/)))
+   ("h" "C-b")
+   ("l" "C-f")
+   ("k" "C-p")
+   ("j" "C-n")))
 
 
 (provide 'kak-conf)
