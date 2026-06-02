@@ -61,6 +61,7 @@
   :after transient)
 
 (require 'regular-editing-setup)
+(require 'vertico-conf)
 ;; (require 'structural-editing-setup)
 (require 'lsp-setup)
 (require 'pdf-reading-setup)
@@ -79,6 +80,8 @@
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 
+(add-to-list 'default-frame-alist
+             '(font . "JetBrainsMono NF-12"))
 (set-face-attribute 'mode-line nil :height 1.2)
 (set-face-attribute 'mode-line-inactive nil :height 1.2)
 (set-face-attribute 'default nil :height 120)

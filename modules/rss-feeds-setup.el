@@ -1,5 +1,3 @@
-
-
 (use-package elfeed
   :after compat
   :config
