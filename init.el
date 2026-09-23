@@ -51,8 +51,8 @@
 
 ;; newer version of compat required by elfeed
 ;; than built into emacs 30.2-r3
-(use-package compat
-  :ensure (:wait t))
+;;(use-package compat
+;;  :ensure (:wait t))
 
 
 (use-package cond-let)
