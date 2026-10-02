@@ -20,6 +20,17 @@
         '((left-fringe . 8)
           (right-fringe . 8))))
 
+(use-package orderless
+  :custom
+  (completion-styles '(orderless basic))
+  (completion-category-defaults nil)
+  (completion-category-overrides '((file (styles partial-completion)))))
+
+(use-package consult
+  :bind (())
+  :config
+  )
+
 (provide 'vertico-conf)
 ;; (use-package vertico
 ;;   :ensure (vertico :files (:defaults "extensions/*"))

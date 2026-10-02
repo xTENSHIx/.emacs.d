@@ -18,7 +18,8 @@
   :bind (("C-c l a" . eglot-code-action))
   :config
   (add-hook 'eglot-managed-mode-hook #'my-eglot-disable-eldoc-noise)
-  (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1))))
+  (add-hook 'eglot-managed-mode-hook (lambda () (eglot-inlay-hints-mode -1)))
+  (setq eglot-extend-to-xref t))
 
 
 (use-package eldoc-box

@@ -48,6 +48,7 @@
 
 (setq package-install-upgrade-built-in t)
 (use-package kaolin-themes)
+(use-package ef-themes)
 
 ;; newer version of compat required by elfeed
 ;; than built into emacs 30.2-r3
@@ -81,7 +82,7 @@
 (setq-default indent-tabs-mode nil)
 
 (add-to-list 'default-frame-alist
-             '(font . "JetBrainsMono NF-12"))
+             '(font . "Monaspace Argon NF-12"))
 (set-face-attribute 'mode-line nil :height 1.2)
 (set-face-attribute 'mode-line-inactive nil :height 1.2)
 (set-face-attribute 'default nil :height 120)
