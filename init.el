@@ -70,6 +70,7 @@
 (require 'meow-conf)
 (require 'kak-conf)
 (require 'org-setup)
+(require 'jupyter-setup)
 
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
