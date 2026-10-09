@@ -3,7 +3,8 @@
   :bind (("C-c c" . org-capture))
   :config
   (add-to-list 'org-modules 'org-habit t)
-  (setq org-directory "~/org/"))
+  (setq org-directory "~/org/")
+  (setq org-fromat-latex-options (plist-put org-format-latex-options :scale 2)))
 
 (use-package org-noter)
 

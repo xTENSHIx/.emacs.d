@@ -13,17 +13,20 @@
       (goto-char (point-min))
 
       (while (re-search-forward "#\\+begin_src jupyter-python" nil t)
-        (replace-match "#+begin_src jupyter-python :session py :async yes")))
+        (replace-match "#+begin_src jupyter :session py :async yes :kernel fh-ml")))
     output-file))
 
 (use-package jupyter
   :after org
   :config
-  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append))
+  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (jupyter . t)))
 
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((emacs-lisp . t)
-   (jupyter . t)))
+  ;; sytax highlighting
+  (add-to-list 'org-src-lang-modes '("jupyter" . python-ts))
+  (setq org-src-fontify-natively t))
 
 (provide 'jupyter-setup)
